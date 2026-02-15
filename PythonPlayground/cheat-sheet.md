@@ -29,3 +29,19 @@ By following these steps, you ensure that your project dependencies are consiste
 
 **Other Tips**
 * VS code comes with a "Python Profile" that you can enable. A good starting point for Python development as it sets up a lot of pre-requisites: extensions, libraries, settings, etc.
+
+**Typical Python Project Structure**
+my_project/
+├── src/
+│   ├── my_package/
+│   │   ├── __init__.py
+│   │   ├── module1.py
+│   │   └── utils.py
+├── tests/
+│   ├── test_module1.py
+│   └── test_utils.py
+├── .gitignore
+├── pyproject.toml
+├── requirements.txt
+├── README.md
+└── LICENSE
