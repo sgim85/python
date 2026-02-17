@@ -1,9 +1,14 @@
 '''
-Create a RAG-based client application
+Source: https://github.com/MicrosoftLearning/mslearn-ai-studio/blob/main/Instructions/04-Use-own-data.md
+Create a RAG-based client application.
+
+You'll use Microsoft Foundry to integrate custom data into a generative AI solution.
+
 When you've created an Azure AI Search index for your contextual data, you can use it with an OpenAI model. 
 To ground prompts with data from your index, the Azure OpenAI SDK supports extending the request with connection details for the index.
 
-NOTE: The code below is not fully complete
+Packages to install:
+openai
 '''
 
 import os

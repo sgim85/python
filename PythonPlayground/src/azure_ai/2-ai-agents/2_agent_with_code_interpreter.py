@@ -1,4 +1,8 @@
 '''
+Source: https://github.com/MicrosoftLearning/mslearn-ai-agents/blob/main/Instructions/02-build-ai-agent.md
+
+In Azure, you will use the Azure AI Agent Service to develop an agent that uses built-in tools.
+
 Use Azure AI Agent Service SDK to create a client application that uses an AI agent. 
 The agent can use the built-in Code Interpreter tool to run dynamic Python code to perform statistical analyses.
 

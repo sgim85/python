@@ -1,5 +1,8 @@
 '''
+Source: https://github.com/MicrosoftLearning/mslearn-ai-agents/blob/main/Instructions/04-semantic-kernel.md
+
 Develop an Azure AI chat agent with the Microsoft Agent Framework SDK
+Learn how to use the Microsoft Agent Framework SDK to create and use an Azure AI chat agent.
 
 Use Azure AI Agent Service and Microsoft Agent Framework to create an AI agent that processes expense claims.
 We will use the Microsoft Agent Framework SDK to create an agent with a custom tool.

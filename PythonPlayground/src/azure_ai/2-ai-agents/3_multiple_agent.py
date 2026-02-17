@@ -1,5 +1,9 @@
 '''
-Ccreate a project that orchestrates multiple AI agents using Microsoft Foundry Agent Service. 
+Source: https://github.com/MicrosoftLearning/mslearn-ai-agents/blob/main/Instructions/03b-build-multi-agent-solution.md
+
+Learn to configure multiple agents to collaborate using Microsoft Foundry Agent Service
+
+Create a project that orchestrates multiple AI agents using Microsoft Foundry Agent Service. 
 You'll design an AI solution that assists with ticket triage. The connected agents will assess the ticket's priority, suggest a team assignment, and determine the level of effort required to complete the ticket
 
 Prerequisite: Create a project in Azure Foundry. A model, e.g. gpt-4o, will be deployed automatically. If model isn't automatically created as well, create & deploy it.

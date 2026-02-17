@@ -1,4 +1,8 @@
 '''
+Source: https://github.com/MicrosoftLearning/mslearn-ai-agents/blob/main/Instructions/03c-use-agent-tools-with-mcp.md
+Other mcp related sources:
+https://github.com/MicrosoftLearning/mslearn-ai-agents/blob/main/Instructions/03-mcp-integration.md
+
 Build an agent that connects to a cloud-hosted MCP server.
 
 The agent will use AI-powered search to help developers find accurate, real-time answers from Microsoft's official documentation. 
