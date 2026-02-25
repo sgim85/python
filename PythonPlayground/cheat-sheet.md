@@ -34,6 +34,7 @@ By following these steps, you ensure that your project dependencies are consiste
 * Ctrl+Shift+`: Open command prompt for your selected terminal
 * Ctrl+Shift+P: Open VS code command pallette
 * ctrl+Shift+x: Open extensions
+* Shift+Alt+F: Format code
 * Editing shortcuts:
     * F12: Go to Definition
     * Alt+F12: Peek Definition
@@ -57,6 +58,12 @@ By following these steps, you ensure that your project dependencies are consiste
     * *import module* imports the entire module; e.g. *import math*, which is then used as *math.sqrt*, *math.pi*, and so on. 
     * *from module import* imports specific items (functions, classes, or variables) from a module; e.g. *from math import sqrt, pi*, with those imported functions used direcly...*sqrt(), pi* and so on.
 * *package* vs *distribution*: a *package* refers to a directory structure for organizing code, while a *distribution* (or distribution package) is the installable software bundle used for sharing that code.
+* *Workspace settings.json vs User settings.json*: Workspace settings override user settings for specific projects. They ensure consistent configurations (linters, formatters) across teams by sharing project-specific settings. They are highly prioritized and can be edited directly or via the settings. Workspace settings can be updated via command palette (*Preferences: Open Workspace Settings (JSON)*); for user settings use command *Preferences: Open User Settings (JSON)*
+* *Linting*: Syntax error detection is enabled by default in the Python extension's Language Server. You can enable linting for additional code detection, including stylistic checks, by installing a *Linting* extension, such as *flake8*.
+* *Formatting*: Formatting makes source code easier to read by human beings. By enforcing particular rules and conventions such as line spacing, indents, and spacing around operators, the code becomes more visually organized and comprehensible. Formatting extensions you can install include *autopep8* and *Black formatter*. 
+    * To set a default formatter, right click a *.py* file, select *Format Document With...*, select *Configure Default Formatter*; alternatively, you can set the default formatter by setting "editor.defaultFormatter" in the *settings.json* file, which can be opened in command palette via *Preferences: Open User Settings (JSON)*.
+    * To format code, right-click on the editor and select *Format Document*, or by using the *Shift+Alt+F* shortcut.
+    * To enable auto-formatting on file save, enable *editor.formatOnSave* in user settings.
 * *with* statement is a control flow structure that simplifies resource management by automatically handling the setup and teardown phases of common operations. It is used with objects that support the context manager protocol, which guarantees that a resource is properly released, even if errors occur within the associated code block. It is similar to C#'s *using* statement.
 
             
