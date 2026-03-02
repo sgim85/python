@@ -1,11 +1,11 @@
-### Steps to create python project
-* Create project folder (with or without command line)
-* Navigate to folder with cmd and open VS Code in project location using command "Code ."
-* Enable virtual environment. Open command pallette (Ctrl + Shift + P). Type "Python: Create Environment". Select "Venv", then select latest python version installed.
+## Steps to create python project
+* Create project folder
+* Navigate to the folder via command line and enter "*Code .*" to open VS Code.
+* Enable virtual environment. Open command pallette (*Ctrl + Shift + P*). Type "Python: Create Environment". Select "Venv", then select latest python version installed.
     * A virtual environment isolates projects so any installed libraries don't interfere with other project envs or the global interpreter env.
     * An environment folder (/.venv) will be created in the project root.
 
-To Run current file, open command pallete (ctrl + shift + p), type "Run Python File"
+To Run the file in focus, open the Command Pallete and enter "*Run Python File*"
 
 ### To Debug, use following commands
 * F5 - Run Debugger
@@ -21,12 +21,12 @@ Use *pip install <package_name>* to install a library, or *pip install -r requir
 
 While not strictly mandatory in all cases, it is highly recommended to use *python -m pip* instead of just *pip*. Prepending *python -m* ensures you are using the pip associated with the specific Python interpreter you are running, preventing issues with multiple Python versions.
 
-To install packages in requirements.txt and additional packages, use command *pip install -r requirements.txt <package_1> <package_2>..*
+To install packages in *requirements.txt* and additional packages, use command *pip install -r requirements.txt <package_1> <package_2>..*
 
 ### Managing dependencies across environments
 When working on Python projects, it’s essential to manage your dependencies effectively. One useful tip is to use the *pip freeze > requirements.txt* command.
 This command helps you create a *requirements.txt* file that lists all the packages installed in your virtual environment. This file can then be used to recreate the same environment elsewhere.
-Furthermore, you can continue to add dependencies to it as your project may grow in complexity using command "*pip install -r requirements.txt*"
+Furthermore, you can continue to add dependencies to it as your project may grow in complexity using command "*pip install -r requirements.txt*."
 By following these steps, you ensure that your project dependencies are consistent across different environments, making it easier to collaborate with others and deploy your project.
 
 ### Useful shortcuts
@@ -40,13 +40,13 @@ By following these steps, you ensure that your project dependencies are consiste
     * Alt+F12: Peek Definition
 
 ### Read-Eval-Print Loop
-* To activate the classic Python REPL, type "python" in the terminal, which will switch to ">>>". OR you can use command palette (*Ctrl+Shift+P*) then enter "**Python: Start Terminal REPL**".
+* To activate the classic Python REPL, type "python" in the terminal, which will switch to ">>>". OR you can use command palette then enter "**Python: Start Terminal REPL**"
 * To activate the native VS Code REPL, which has additional VS Code enhancements like intellicense and syntax highlighting, you have a couple of options:
     * Search for **Python: Start Native REPL** in the command palette.
     * Via Smart Send (*Shift+Enter*) and "Run Selection/Line in Python REPL" by setting "python.REPL.sendToNativeREPL": true in your settings.json file. NOTE: You can opt to continue to use the REPL built-in to Python located in the terminal ( >>> ) by setting "python.REPL.sendToNativeREPL": false in your settings.json.
 
 ### Miscellaneous
-* VS code comes with a "Python Profile" that you can enable. A good starting point for Python development as it sets up a lot of pre-requisites: extensions, libraries, settings, etc.
+* VS code comes with a "Python Profile" that you can enable. A good starting point for Python development as it sets up a lot of prerequisites: extensions, libraries, settings, etc.
 * **Smart Send** feature (*Shift+Enter*): Smart Send looks at the code where the cursor is placed, sends the smallest runnable chunk of code to the Python REPL, and then places your cursor at the next line of code. This enables you to easily and efficiently run Python code in your program.
 * To run python file, press play button in the top right (*Run Python File*). Alternatively, right-click inside file, then go to **Run Python > Run > Python File in Terminal**
 * To run selected lines, press *Shift+Enter* (Smart Send). Alternatively, right-click inside file, then go to **Run Python > Run Selection/Line in Python Terminal**
@@ -54,17 +54,17 @@ By following these steps, you ensure that your project dependencies are consiste
 * The *settings.json* stores user preferences and customizations for the editor. E.g. to specify intellisense behavior for a language. Two ways to access settings:
     * Command palette: Type *Open Settings JSON*
     * Editor UI: *File > Preferences > Settings*
-* *import module* vs *from module import*: 
-    * *import module* imports the entire module; e.g. *import math*, which is then used as *math.sqrt*, *math.pi*, and so on. 
-    * *from module import* imports specific items (functions, classes, or variables) from a module; e.g. *from math import sqrt, pi*, with those imported functions used direcly...*sqrt(), pi* and so on.
-* *package* vs *distribution*: a *package* refers to a directory structure for organizing code, while a *distribution* (or distribution package) is the installable software bundle used for sharing that code.
+* **import module** vs **from module import**: 
+    * **import module:** imports the entire module; e.g. *import math*, which is then used as *math.sqrt*, *math.pi*, and so on. 
+    * **from module import:** imports specific items (functions, classes, or variables) from a module; e.g. *from math import sqrt, pi*, with those imported functions used direcly...*sqrt(), pi* and so on.
+* **package** vs **distribution**: a *package* refers to a directory structure for organizing code, while a *distribution* (or distribution package) is the installable software bundle used for sharing that code.
 * *Workspace settings.json vs User settings.json*: Workspace settings override user settings for specific projects. They ensure consistent configurations (linters, formatters) across teams by sharing project-specific settings. They are highly prioritized and can be edited directly or via the settings. Workspace settings can be updated via command palette (*Preferences: Open Workspace Settings (JSON)*); for user settings use command *Preferences: Open User Settings (JSON)*
-* *Linting*: Syntax error detection is enabled by default in the Python extension's Language Server. You can enable linting for additional code detection, including stylistic checks, by installing a *Linting* extension, such as *flake8*.
-* *Formatting*: Formatting makes source code easier to read by human beings. By enforcing particular rules and conventions such as line spacing, indents, and spacing around operators, the code becomes more visually organized and comprehensible. Formatting extensions you can install include *autopep8* and *Black formatter*. 
+* **Linting**: Syntax error detection is enabled by default in the Python extension's Language Server. You can enable linting for additional code detection, including stylistic checks, by installing a *Linting* extension, such as *flake8*.
+* **Formatting**: Formatting makes source code easier to read by human beings. By enforcing particular rules and conventions such as line spacing, indents, and spacing around operators, the code becomes more visually organized and comprehensible. Formatting extensions you can install include *autopep8* and *Black formatter*. 
     * To set a default formatter, right click a *.py* file, select *Format Document With...*, select *Configure Default Formatter*; alternatively, you can set the default formatter by setting "editor.defaultFormatter" in the *settings.json* file, which can be opened in command palette via *Preferences: Open User Settings (JSON)*.
     * To format code, right-click on the editor and select *Format Document*, or by using the *Shift+Alt+F* shortcut.
     * To enable auto-formatting on file save, enable *editor.formatOnSave* in user settings.
-* *with* statement is a control flow structure that simplifies resource management by automatically handling the setup and teardown phases of common operations. It is used with objects that support the context manager protocol, which guarantees that a resource is properly released, even if errors occur within the associated code block. It is similar to C#'s *using* statement.
+* **with** statement is a control flow structure that simplifies resource management by automatically handling the setup and teardown phases of common operations. It is used with objects that support the context manager protocol, which guarantees that a resource is properly released, even if errors occur within the associated code block. It is similar to C#'s *using* statement.
 
             
                 # Without 'with' (requires explicit closing)
@@ -78,7 +78,7 @@ By following these steps, you ensure that your project dependencies are consiste
                 with open("example.txt", "w") as file:
                     file.write("Hello, World!")
             
-* *def main* is a convention, not a requirement, used to define a function that acts as the entry point for a script when it is run directly. This is used in conjuction with a special built-variable *__name__*.
+* *def main* is a convention, not a requirement, used to define a function that acts as the entry point for a script when it is run directly. This is used in conjuction with a special built-variable **\_\_name__**.
 
             
                 def main():
