@@ -1,10 +1,10 @@
-## Steps to create python project
+### Steps to create python project
 * Create project folder
 * Navigate to the folder via command line and enter "*Code .*" to open VS Code.
 * Enable virtual environment. Open command pallette (*Ctrl + Shift + P*). Type "Python: Create Environment". Select "Venv", then select latest python version installed.
     * A virtual environment isolates projects so any installed libraries don't interfere with other project envs or the global interpreter env.
     * An environment folder (/.venv) will be created in the project root.
-
+    
 To Run the file in focus, open the Command Pallete and enter "*Run Python File*"
 
 ### To Debug, use following commands
@@ -15,7 +15,7 @@ To Run the file in focus, open the Command Pallete and enter "*Run Python File*"
 * Shit+F5 - Terminate debugger
 * Ctrl+Shift+F5 - Restart debugger
 
-## Installing Python Packages
+### Installing Python Packages
 *pip install* is the standard command used to install Python packages from the Python Package Index (PyPI) and other indexes.
 Use *pip install <package_name>* to install a library, or *pip install -r requirements.txt* to install dependencies listed in a file.
 
@@ -90,7 +90,25 @@ By following these steps, you ensure that your project dependencies are consiste
                 # Call the main() function only when the script is executed as the primary program
                 if __name__ == "__main__":
                     main()
-            
+
+* **Environments:** A workspace can have multiple projects, and environments can be configured at project level instead of workspace level. A Python project is any file or folder you want to associate with a specific environment. By default, your entire workspace uses one environment. Projects let you assign different environments to different folders. This is essential for mono-repos, microservices, or testing across Python versions.
+
+            Workspace
+            ├── Python Project: backend/
+            │     └── Environment: .venv (Python 3.12)
+            │            └── Manager: venv
+            │
+            ├── Python Project: frontend-utils/
+            │     └── Environment: .venv (Python 3.10)
+            │            └── Manager: venv
+            │
+            └── Python Project: ml-pipeline/
+                └── Environment: ml-env (Python 3.11)
+                        └── Manager: conda
+
+    * [Learn more on environments](https://code.visualstudio.com/docs/python/environments)
+* **Debugging:** [Learn more on debugging, including advanced debugging](https://code.visualstudio.com/docs/python/debugging)
+
 
 **Typical Python Project Structure**
 
