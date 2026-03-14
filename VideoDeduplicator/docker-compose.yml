@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  deduper:
+    build: .
+    container_name: video_deduper_worker
+    environment:
+      - DB_PATH=/data/videos.db
+      - VIDEO_ROOTS=/videos
+      - HASH_WORKERS=6
+    volumes:
+      - ./data:/data
+      - /path/to/your/videos:/videos:ro
+    command: ["all"]
+
+  deduper_api:
+    image: video_deduper_worker
+    container_name: video_deduper_api
+    environment:
+      - DB_PATH=/data/videos.db
+      - VIDEO_ROOTS=/videos
+    volumes:
+      - ./data:/data
+      - /path/to/your/videos:/videos:ro
+    ports:
+      - "8000:8000"
+    command: ["uvicorn", "api_app:app", "--host", "0.0.0.0", "--port", "8000"]

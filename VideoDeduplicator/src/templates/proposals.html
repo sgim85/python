@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proposed Duplicates</title>
+  <style>
+    body { font-family: sans-serif; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <h1>Proposed Duplicates (Delete/Move)</h1>
+  <table>
+    <tr>
+      <th>Duplicate Video ID</th>
+      <th>Duplicate Path</th>
+      <th>Canonical Video ID</th>
+      <th>Canonical Path</th>
+    </tr>
+    {% for r in rows %}
+    <tr>
+      <td>{{ r.video_id }}</td>
+      <td>{{ r.dup_path }}</td>
+      <td>{{ r.canonical_of }}</td>
+      <td>{{ r.canonical_path }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>(Export this into your mover/deleter tooling.)</p>
+  <p><a href="/">Back to clusters</a></p>
+</body>
+</html>

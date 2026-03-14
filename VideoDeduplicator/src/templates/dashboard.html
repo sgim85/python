@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Deduper - Clusters</title>
+  <style>
+    body { font-family: sans-serif; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <h1>Duplicate Clusters</h1>
+
+  <form method="get">
+    Min size: <input type="number" name="min_size" value="{{ min_size }}">
+    Search path: <input type="text" name="q" value="{{ q }}">
+    <button type="submit">Filter</button>
+  </form>
+
+  <p><a href="/proposals">Proposed duplicates</a></p>
+
+  <table>
+    <tr>
+      <th>Cluster ID</th>
+      <th>Canonical Video</th>
+      <th>Count</th>
+    </tr>
+    {% for c in clusters %}
+    <tr>
+      <td><a href="/cluster/{{ c.cluster_id }}">{{ c.cluster_id }}</a></td>
+      <td>{{ c.canonical_video_id }}</td>
+      <td>{{ c.count }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

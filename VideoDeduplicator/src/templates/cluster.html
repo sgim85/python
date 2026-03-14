@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cluster {{ cluster_id }}</title>
+  <style>
+    body { font-family: sans-serif; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; }
+    .canonical { font-weight: bold; color: green; }
+    .duplicate { color: #a00; }
+  </style>
+</head>
+<body>
+  <h1>Cluster {{ cluster_id }}</h1>
+  <p>Canonical: {{ canonical }}</p>
+  <table>
+    <tr>
+      <th>Video ID</th>
+      <th>Path</th>
+      <th>Role</th>
+      <th>Resolution</th>
+      <th>Bitrate</th>
+      <th>Codec</th>
+      <th>Duration</th>
+    </tr>
+    {% for m in members %}
+    {% set role = "canonical" if not m.is_duplicate else "duplicate" %}
+    <tr class="{{ role }}">
+      <td>{{ m.video_id }}</td>
+      <td>{{ m.path }}</td>
+      <td>{{ role }}</td>
+      <td>{{ m.width }}x{{ m.height }}</td>
+      <td>{{ m.bitrate }}</td>
+      <td>{{ m.codec }}</td>
+      <td>{{ "%.2f"|format(m.duration) }}s</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/">Back to clusters</a></p>
+</body>
+</html>
