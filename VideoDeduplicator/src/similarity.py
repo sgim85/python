@@ -1,7 +1,7 @@
 import sqlite3
 from itertools import combinations
 
-DURATION_TOL = 2.0  # seconds
+DURATION_TOL = 10.0  # seconds. Previously 2 sec
 FRAMECOUNT_TOL = 0.05  # ±5%
 HAMMING_THRESHOLD = 16.0  # max avg hamming to store similarity
 

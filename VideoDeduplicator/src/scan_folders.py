@@ -1,6 +1,6 @@
 import os, uuid, time, sqlite3
 
-VIDEO_EXTS = {".mp4", ".mkv", ".avi", ".mov", ".webm"}
+VIDEO_EXTS = {".mp4", ".mkv", ".avi", ".mov", ".webm", ".flv"}
 
 
 def iter_videos(roots):

@@ -1,3 +1,5 @@
+Source: [Python in VS Code](https://code.visualstudio.com/docs/python/python-quick-start)
+
 ### Steps to create python project
 * Create project folder
 * Navigate to the folder via command line and enter "*Code .*" to open VS Code.
@@ -45,6 +47,9 @@ By following these steps, you ensure that your project dependencies are consiste
     * Search for **Python: Start Native REPL** in the command palette.
     * Via Smart Send (*Shift+Enter*) and "Run Selection/Line in Python REPL" by setting "python.REPL.sendToNativeREPL": true in your settings.json file. NOTE: You can opt to continue to use the REPL built-in to Python located in the terminal ( >>> ) by setting "python.REPL.sendToNativeREPL": false in your settings.json.
 
+### Jupyter Notebooks
+Jupyter is an open-source project that lets you easily combine Markdown text and executable Python source code on one canvas called a **notebook**. [Learn more](https://code.visualstudio.com/docs/python/jupyter-support-py) about Jupyter support in VS Code.
+
 ### Miscellaneous
 * VS code comes with a "Python Profile" that you can enable. A good starting point for Python development as it sets up a lot of prerequisites: extensions, libraries, settings, etc.
 * **Smart Send** feature (*Shift+Enter*): Smart Send looks at the code where the cursor is placed, sends the smallest runnable chunk of code to the Python REPL, and then places your cursor at the next line of code. This enables you to easily and efficiently run Python code in your program.
@@ -58,12 +63,22 @@ By following these steps, you ensure that your project dependencies are consiste
     * **import module:** imports the entire module; e.g. *import math*, which is then used as *math.sqrt*, *math.pi*, and so on. 
     * **from module import:** imports specific items (functions, classes, or variables) from a module; e.g. *from math import sqrt, pi*, with those imported functions used direcly...*sqrt(), pi* and so on.
 * **package** vs **distribution**: a *package* refers to a directory structure for organizing code, while a *distribution* (or distribution package) is the installable software bundle used for sharing that code.
-* *Workspace settings.json vs User settings.json*: Workspace settings override user settings for specific projects. They ensure consistent configurations (linters, formatters) across teams by sharing project-specific settings. They are highly prioritized and can be edited directly or via the settings. Workspace settings can be updated via command palette (*Preferences: Open Workspace Settings (JSON)*); for user settings use command *Preferences: Open User Settings (JSON)*
+* **Workspace settings.json vs User settings.json**: Workspace settings override user settings for specific projects. They ensure consistent configurations (linters, formatters) across teams by sharing project-specific settings. They are highly prioritized and can be edited directly or via the settings. Workspace settings can be updated via command palette (*Preferences: Open Workspace Settings (JSON)*); for user settings use command *Preferences: Open User Settings (JSON)*
 * **Linting**: Syntax error detection is enabled by default in the Python extension's Language Server. You can enable linting for additional code detection, including stylistic checks, by installing a *Linting* extension, such as *flake8*.
 * **Formatting**: Formatting makes source code easier to read by human beings. By enforcing particular rules and conventions such as line spacing, indents, and spacing around operators, the code becomes more visually organized and comprehensible. Formatting extensions you can install include *autopep8* and *Black formatter*. 
     * To set a default formatter, right click a *.py* file, select *Format Document With...*, select *Configure Default Formatter*; alternatively, you can set the default formatter by setting "editor.defaultFormatter" in the *settings.json* file, which can be opened in command palette via *Preferences: Open User Settings (JSON)*.
     * To format code, right-click on the editor and select *Format Document*, or by using the *Shift+Alt+F* shortcut.
     * To enable auto-formatting on file save, enable *editor.formatOnSave* in user settings.
+* [Python in a container](https://code.visualstudio.com/docs/containers/quickstart-python)
+* **Dev Frameworks**
+    * [Django](https://code.visualstudio.com/docs/python/tutorial-django)
+    * [FastAPI](https://code.visualstudio.com/docs/python/tutorial-fastapi)
+    * [Flask](https://code.visualstudio.com/docs/python/tutorial-flask)
+* [Run and Debug Python in the Web](https://code.visualstudio.com/docs/python/python-web) (experimental support)
+* **Tests**: Python has a built-in *unittest* framework. A thirdparty alternative is the *pytest* framework which offers more features, if desired.
+    * Tests can be configured anytime by using the **Python: Configure Tests** command from the Command Palette or by setting either **python.testing.unittestEnabled** or **python.testing.pytestEnabled** in the Settings editor.
+    * *Test Discovery*: By default, the Python extension attempts to discover tests once you enable a framework. You can trigger test discovery at any time using the Test: Refresh Tests command from the Command Palette.
+    * [More on testing](https://code.visualstudio.com/docs/python/testing)
 * **with** statement is a control flow structure that simplifies resource management by automatically handling the setup and teardown phases of common operations. It is used with objects that support the context manager protocol, which guarantees that a resource is properly released, even if errors occur within the associated code block. It is similar to C#'s *using* statement.
 
             
