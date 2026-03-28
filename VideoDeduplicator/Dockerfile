@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Note these env variables will be overriden by docker-compose or can be set at runtime
 ENV DB_PATH=/data/videos.db
 ENV VIDEO_ROOTS=/videos
 ENV HASH_WORKERS=4
